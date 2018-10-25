@@ -1,0 +1,95 @@
+---
+title: "INF2471 - Implementação da Primeira Prova - 2018.2"
+author: "Jessica Cardoso"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteDepends{rgl}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## 1a Questão
+
+Seja $A_{a,b,n}$ $\in$ $\mathbf{R}^{n\times n}$ uma matriz tri-diagonal dada por:
+$$A_{a,b,n}=\begin{bmatrix}
+a & b & 0 & \cdots & 0 & 0\\ 
+b & a & b & \ddots & \ddots & \vdots\\ 
+0 & b & a & b & \ddots & \vdots\\ 
+\vdots & \ddots & \ddots & \ddots & \ddots & 0\\ 
+\vdots & \ddots & \ddots & b & a & b\\ 
+0 & \cdots & \cdots & 0 & b & a
+\end{bmatrix} _{n,n}$$
+
+####### a) Faça um algoritmo para obter uma decomposição Cholesky de uma matriz tridiagonal $A_{a,b,n}$, supondo que ela seja definida positiva.
+```{r}
+A <- matrix(c(8,2,0,0,
+              2,8,2,0,
+              0,2,8,2,
+              0,0,2,8),nrow=4,ncol=4)
+
+print(A)
+cho <- INF2471.P1::cholesky(A)
+print(cho)
+print(cho%*%t(cho))
+```
+#######  b) Faça um algoritmo para obter uma decomposição QR de uma matriz tridiagonal $A_{a,b,n}$. Escolha entre Gram-Schmidt, Householder e Givens, a que melhor se aplica nesse contexto .
+```{r}
+print('R')
+```
+## 3a Questão
+
+Determine uma base ortonormal para o espaço complementar ortogonal ao vetor $v=[1,-1,1]$ $\in$ $\mathbf{R}^3$
+
+```{r}
+v <- matrix(c(1, -1, 1), byrow = T, nrow = 1)
+base <- INF2471.P1::find_orthogonal_complement(v)
+print(base)
+base_ortonormal <- INF2471.P1::apply_Gram_Schmidt(base)
+print(base_ortonormal)
+
+#Dois vetores são ortonormais entre si, se o produto interno deles 
+#é igual a zero e se possuem norma 1.
+#Produto Interno
+print(INF2471.P1::dotprod(base_ortonormal[1, ], base_ortonormal[2, ]))
+#Norma
+print(INF2471.P1::magnitude(base_ortonormal[1, ]))
+print(INF2471.P1::magnitude(base_ortonormal[2, ]))
+
+
+```
+
+```{r echo=TRUE}
+library(rgl)
+mfrow3d(nr = 1, nc = 1, sharedMouse = TRUE)
+plot3d('')
+arrow3d(c(0,0,0), c(1,-1,1), barblen=.2, lwd=3, col="green")
+arrow3d(c(0,0,0), base_ortonormal[1, ], barblen=.2, lwd=3, col="blue")
+arrow3d(c(0,0,0), base_ortonormal[2, ], barblen=.2, lwd=3, col="blue")
+rglwidget()
+```
+
+## 4a Questão
+
+Calcule a pseudoinversa de A:
+$$A=\begin{bmatrix}
+1 & 0\\ 
+0 & 1\\ 
+1 & 1
+\end{bmatrix}$$
+
+```{r}
+A <- matrix(c(1, 0, 1,
+               0, 1, 1), ncol = 2)
+print(A)
+pseudoinverse <- INF2471.P1::apply_pseudo_inverse(A)
+print(pseudoinverse)
+```
