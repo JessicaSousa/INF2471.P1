@@ -21,32 +21,3 @@ library(INF2471.P1)
 ?apply_pseudo_inverse
 help(apply_pseudo_inverse)
 ```
-
-Aparecerá as instruções da seguinte forma: 
-
-------------------------------------------------------
-apply_pseudo_inverse {INF2471.P1}	R Documentation
-## Function: Pseudo Inverse
-
-#### Description
-
-Given an m×n real matrix A, this function calculates the pseudo-inverse A+ of the matrix A.
-
-#### Usage
-
-apply_pseudo_inverse(A)
-#### Arguments
-
-A	
-matrix of real numbers
-#### Value
-
-Returns a matrix A representing the pseudo-inverse of A.
-
-#### Examples
-
-A <- matrix(c(1, 0, 1,
-              0, 1, 1), ncol = 2)
-
-print(apply_pseudo_inverse(A))
-
