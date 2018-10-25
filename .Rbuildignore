@@ -1,5 +1,6 @@
 ^Meta$
 ^doc$
 ^LICENSE\.md$
-^INF2471\.Rproj$
+^INF2471.P1\.Rproj$
 ^\.Rproj\.user$
+^\.travis\.yml$
