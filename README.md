@@ -37,7 +37,7 @@ apply_pseudo_inverse(A)
 
 A	
 matrix of real numbers
-Value
+#### Value
 
 Returns a matrix A representing the pseudo-inverse of A.
 
