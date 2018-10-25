@@ -9,4 +9,41 @@ As função foram construídas em formato de pacote do R, o nome do pacote é "I
 devtools::install_github("JessicaSousa/INF2471.P1")
 ```
 
+Dúvidas sobre as funções do pacote, experimente `help(nome_da_função)` ou `?nome_da_função`, exemplo:
+
+``` r
+#Carregar pacote
+library(INF2471.P1)
+
+#No console:
+?apply_pseudo_inverse
+help(apply_pseudo_inverse)
+```
+
+Aparecerá algo da seguinte forma
+
+------------------------------------------------------
+apply_pseudo_inverse {INF2471.P1}	R Documentation
+### Function: Pseudo Inverse
+
+#### Description
+
+Given an m×n real matrix A, this function calculates the pseudo-inverse A+ of the matrix A.
+
+#### Usage
+
+apply_pseudo_inverse(A)
+#### Arguments
+
+A	
+matrix of real numbers
+Value
+
+Returns a matrix A representing the pseudo-inverse of A.
+
+#### Examples
+
+A <- matrix(c(1, 0, 1,
+              0, 1, 1), ncol = 2)
+print(apply_pseudo_inverse(A))
 
