@@ -67,15 +67,15 @@ print(INF2471.P1::magnitude(base_ortonormal[2, ]))
 
 ```
 
-```{r echo=TRUE}
-library(rgl)
-mfrow3d(nr = 1, nc = 1, sharedMouse = TRUE)
-plot3d('')
-arrow3d(c(0,0,0), c(1,-1,1), barblen=.2, lwd=3, col="green")
-arrow3d(c(0,0,0), base_ortonormal[1, ], barblen=.2, lwd=3, col="blue")
-arrow3d(c(0,0,0), base_ortonormal[2, ], barblen=.2, lwd=3, col="blue")
-rglwidget()
-```
+<!-- ```{r echo=TRUE} -->
+<!-- library(rgl) -->
+<!-- mfrow3d(nr = 1, nc = 1, sharedMouse = TRUE) -->
+<!-- plot3d('') -->
+<!-- arrow3d(c(0,0,0), c(1,-1,1), barblen=.2, lwd=3, col="green") -->
+<!-- arrow3d(c(0,0,0), base_ortonormal[1, ], barblen=.2, lwd=3, col="blue") -->
+<!-- arrow3d(c(0,0,0), base_ortonormal[2, ], barblen=.2, lwd=3, col="blue") -->
+<!-- rglwidget() -->
+<!-- ``` -->
 
 ## 4a Questão
 
