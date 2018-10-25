@@ -20,7 +20,7 @@ library(INF2471.P1)
 help(apply_pseudo_inverse)
 ```
 
-Aparecerá algo da seguinte forma
+Aparecerá as instruções da seguinte forma: 
 
 ------------------------------------------------------
 apply_pseudo_inverse {INF2471.P1}	R Documentation
