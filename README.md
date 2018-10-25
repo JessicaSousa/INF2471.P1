@@ -9,7 +9,7 @@ As função foram construídas em formato de pacote do R, o nome do pacote é "I
 devtools::install_github("JessicaSousa/INF2471.P1")
 ```
 
-Para ter acesso as questões implementas, basta executar a função `vignette("questoes")` no console do R, após a instalação do pacote `INF2471`. Esse *vignette*, está disponível no Github e pode ser acessado [aqui](https://jessicasousa.github.io/INF2471.P1/doc/questoes.html).
+Para ter acesso as questões implementas, basta executar a função `vignette("questoes")` no console do R, após a instalação do pacote `INF2471`. Esse *vignette* está disponível no Github e pode ser acessado [aqui](https://jessicasousa.github.io/INF2471.P1/doc/questoes.html).
 
 Dúvidas sobre as funções do pacote, experimente `help(nome_da_função)` ou `?nome_da_função`, exemplo:
 
