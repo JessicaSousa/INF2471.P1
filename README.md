@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/JessicaSousa/INF2471.P1.svg?branch=master)](https://travis-ci.com/JessicaSousa/INF2471.P1)
 # INF2471.P1
  Implementação das questões da primeira prova da disciplina INF2471 
  
