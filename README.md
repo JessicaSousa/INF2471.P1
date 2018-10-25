@@ -24,7 +24,7 @@ Aparecerá algo da seguinte forma
 
 ------------------------------------------------------
 apply_pseudo_inverse {INF2471.P1}	R Documentation
-### Function: Pseudo Inverse
+## Function: Pseudo Inverse
 
 #### Description
 
