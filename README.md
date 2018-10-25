@@ -45,5 +45,6 @@ Returns a matrix A representing the pseudo-inverse of A.
 
 A <- matrix(c(1, 0, 1,
               0, 1, 1), ncol = 2)
+
 print(apply_pseudo_inverse(A))
 
